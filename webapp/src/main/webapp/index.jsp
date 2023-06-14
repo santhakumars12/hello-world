@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Colorful Form</title>
+  <title>IPL Player Form</title>
   <style>
     body {
       background-color: #f2f2f2;
@@ -28,8 +28,15 @@
     }
     
     input[type="text"],
-    input[type="email"],
+    input[type="number"],
     textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    select {
       width: 100%;
       padding: 8px;
       border: 1px solid #ccc;
@@ -52,19 +59,38 @@
 </head>
 <body>
   <div class="container">
-    <h2>Colorful Form</h2>
+    <img src="ipl_logo.png" alt="IPL Logo" width="150px" height="150px">
+    <h2>IPL Player Form</h2>
     <form>
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <input type="text" id="name" name="name" placeholder="Enter player's name">
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter player's age">
       </div>
       <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+        <label for="team">Team:</label>
+        <select id="team" name="team">
+          <option value="">Select a team</option>
+          <option value="CSK">Chennai Super Kings</option>
+          <option value="MI">Mumbai Indians</option>
+          <option value="RCB">Royal Challengers Bangalore</option>
+          <option value="KKR">Kolkata Knight Riders</option>
+          <option value="RR">Rajasthan Royals</option>
+          <option value="PBKS">Punjab Kings</option>
+          <option value="SRH">Sunrisers Hyderabad</option>
+          <option value="DC">Delhi Capitals</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" placeholder="Enter player's role">
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" placeholder="Enter player's country">
       </div>
       <input type="submit" value="Submit">
     </form>
