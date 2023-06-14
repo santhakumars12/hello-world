@@ -50,7 +50,7 @@
   <div class="form-container">
     <h2>IPL Candidate Form</h2>
     <form>
-      <label for="name">Name:</label>
+      <label for="name">Noob:</label>
       <input type="text" id="name" name="name" required>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
