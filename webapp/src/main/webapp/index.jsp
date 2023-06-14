@@ -48,7 +48,7 @@
 </head>
 <body>
   <div class="form-container">
-    <h2>PPL Candidate Form</h2>
+    <h2>Love Candidate Form</h2>
     <form>
       <label for="name">Noob:</label>
       <input type="text" id="name" name="name" required>
