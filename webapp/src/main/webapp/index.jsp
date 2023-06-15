@@ -1,73 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IPL Candidate Form</title>
-  <style>
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .firecracker {
-      width: 20px;
-      height: 100px;
-      background-color: red;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: blink 1s infinite;
-    }
-
-    .form-container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f2f2f2;
-    }
-
-    .form-container label {
-      font-weight: bold;
-    }
-
-    .form-container input[type="text"],
-    .form-container input[type="email"],
-    .form-container input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .form-container input[type="submit"] {
-      background-color: #4CAF50;
-      color: #fff;
-      cursor: pointer;
-    }
-  </style>
+    <title>Love Application</title>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Love Candidate Form</h2>
-    <form>
-      <label for="name">Noob:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <input type="submit" value="Submit" onclick="showFirecracker()">
+    <h1>Love Application Form</h1>
+    <form action="submit.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="gender">Your Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <label for="interests">Your Interests:</label><br>
+        <textarea id="interests" name="interests" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="partner-requirements">Partner Requirements:</label><br>
+        <textarea id="partner-requirements" name="partner-requirements" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="photo">Upload your photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+        
+        <input type="submit" value="Submit">
     </form>
-  </div>
-
-  <div id="firecracker-container" style="display: none;">
-    <div class="firecracker"></div>
-  </div>
-
-  <script>
-    function showFirecracker() {
-      var firecrackerContainer = document.getElementById("firecracker-container");
-      firecrackerContainer.style.display = "block";
-    }
-  </script>
 </body>
 </html>
 
